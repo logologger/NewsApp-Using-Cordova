@@ -1,0 +1,72 @@
+ <md-toolbar class="md-hue-2">
+      <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+          <md-icon md-svg-icon="assets/img/menu.svg"></md-icon>
+        </md-button>
+        <h2>
+          <span>Top HeadLines of Today</span>
+        </h2>
+        <span flex></span>
+        <md-menu>
+        <md-button class="md-icon-button" aria-label="More" ng-click="DC.openMenu($mdOpenMenu,$event)">
+          <md-icon md-svg-icon="assets/img/more.svg"></md-icon>
+        </md-button>
+    <md-menu-content width="4">
+            <md-menu-item>
+              <md-button >
+                  <div layout="row" flex>
+                    <p flex ng-click="DC.refresh()">Refresh</p>
+                  </div>
+                </md-button>
+        </md-menu-item>
+               <md-menu-item>
+                   <md-button>
+                       <div layout="row" flex>
+                            <p flex ng-click="DC.exitApp()">Exit</p>
+                    </div>
+                    </md-button>
+             </md-menu-item>
+        </md-menu-content>
+        </md-menu>
+      </div>
+    </md-toolbar>
+
+
+
+<div class="bg-loader">
+<md-progress-circular ng-show="DC.loading" class="md-warn md-hue-3 loader" md-diameter="100">
+</md-progress-circular>
+</div>
+<div flex-xs flex-gt-xs="50" layout="column">
+      <md-card ng-repeat="data in DC.newsData">
+        <md-card-header>
+          
+          <md-card-header-text>
+
+            <span class="md-title">{{data.sectionName}}</span>
+<!--            <span class="md-subhead">subhead</span>-->
+
+          </md-card-header-text>
+        </md-card-header>
+        <img ng-src="{{data.fields.thumbnail}}" width="100%" height="50%" alt="{{data.webTitle}}" class="md-card-image">
+        <md-card-title>
+
+
+
+        </md-card-title>
+    <md-card-content>
+          <p>
+           {{data.webTitle}}
+          </p>
+        </md-card-content>
+          <md-card-actions layout="row" layout-align="start center">
+          <md-button class="md-primary" ng-click="DC.viewMoreFunction($event,data.webUrl)">See More</md-button>
+          <md-button id="timeDate">{{data.webPublicationDate | date:'dd-LLLL-yyyy hh:mm a'}}</md-button>
+          </md-card-actions>
+      </md-card>
+    </div>
+
+
+
+
+

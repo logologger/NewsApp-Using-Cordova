@@ -1,0 +1,49 @@
+<html ng-app="newsApp">
+
+<head>
+    <title>Latest News from Around the World</title>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+<!--    <link rel="stylesheet" href="assets/css/bootstrap.css"/>-->
+    <link rel="stylesheet" href="assets/css/common.css"/>
+    <link rel="stylesheet" href="assets/css/angular-material.css"/>
+    
+    
+</head>
+<body ng-controller="newsController as news" ng-cloak>
+ 
+<!--    <h1>{{news.welcomeData}}</h1>-->
+    
+    
+    
+        <div  ui-view></div>
+
+    <script src="assets/js/libs/angular.js"></script>
+    <script src="assets/js/libs/angular.route.js"></script>
+    <script src="assets/js/libs/angular-ui-router.js"></script>
+    <script type="text/javascript" src="assets/js/libs/angular-animate.js"></script>
+    <script type="text/javascript" src="assets/js/libs/angular-aria.js"></script>  
+    <script type="text/javascript" src="assets/js/libs/angular-messages.js"></script>
+    <script type="text/javascript" src="assets/js/libs/angular-material.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    
+    
+    <script src="app.config.js"></script>
+    <!--CONTROLLER-->
+    <script src="app.controller.js"></script>
+    <script src="app/components/dashboard/dashboard.controller.js"></script>
+    <script src="app/components/splash/splash.controller.js"></script>
+    <!--SERVICE-->
+    <script src="app/shared/shared.service.factory.js"></script>
+     <script src="app/components/dashboard/dashboard.service.js"></script>
+    
+</body >
+    
+</html>
+
+
+
+<!-- Web Service URL 
+http://content.guardianapis.com/search?api-key=1fe52415-6e22-4d4d-8c83-2d1a129d3660&show-fields=thumbnail
+-->
