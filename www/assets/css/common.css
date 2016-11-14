@@ -64,3 +64,25 @@ img {
     height:100vh;
     
 }
+.loader{
+
+
+  position: absolute;
+  left: 35%;
+  top: 35%;
+  width: 20px;
+  height: 31px;
+  z-index: 9999;
+  background-color: #ccc;
+  
+
+
+}
+.bg-loader{
+
+
+  background-color: #ccc;
+}
+div.ng-scope.layout-column.flex-xs.flex-gt-xs-50{
+  background-color: #ccc;
+}

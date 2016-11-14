@@ -8,9 +8,6 @@
     <feature name="InAppBrowser">
         <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
     </feature>
-    <feature name="ExitApp">
-        <param name="android-package" value="cordova.custom.plugins.exitapp.ExitApp" />
-    </feature>
     <feature name="SQLitePlugin">
         <param name="android-package" value="io.sqlc.SQLitePlugin" />
     </feature>
@@ -20,8 +17,11 @@
     <feature name="NetworkStatus">
         <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
     </feature>
+    <feature name="ExitApp">
+        <param name="android-package" value="cordova.custom.plugins.exitapp.ExitApp" />
+    </feature>
     <allow-intent href="market:*" />
-    <name>Latest News</name>
+    <name>LatestNews</name>
     <description>
        A application that gives Latest News.
     </description>

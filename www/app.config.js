@@ -1,5 +1,5 @@
 
-angular.module("newsApp",['ui.router','ngMaterial','ngMessages']);
+angular.module("newsApp",['ui.router','ngMaterial','ngMessages','infinite-scroll']);
 
 angular.module("newsApp").config(config);
 

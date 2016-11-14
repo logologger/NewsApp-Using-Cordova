@@ -39,10 +39,7 @@
       <key>NSExceptionDomains</key>
       <dict>
         <key>www.theguardian.com</key>
-        <dict>
-          <key>NSExceptionAllowsInsecureHTTPLoads</key>
-          <true/>
-        </dict>
+        <dict/>
       </dict>
       <key>NSAllowsArbitraryLoads</key>
       <true/>

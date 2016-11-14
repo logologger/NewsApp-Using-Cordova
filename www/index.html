@@ -18,7 +18,9 @@
     
     
         <div  ui-view></div>
+         
 
+        <script type="text/javascript" src="assets/js/libs/jquery-2.2.2.min.js"></script>
     <script src="assets/js/libs/angular.js"></script>
     <script src="assets/js/libs/angular.route.js"></script>
     <script src="assets/js/libs/angular-ui-router.js"></script>
@@ -26,6 +28,7 @@
     <script type="text/javascript" src="assets/js/libs/angular-aria.js"></script>  
     <script type="text/javascript" src="assets/js/libs/angular-messages.js"></script>
     <script type="text/javascript" src="assets/js/libs/angular-material.js"></script>
+    <script type="text/javascript" src="assets/js/libs/angular-infinite-scroll.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     
     
@@ -36,9 +39,23 @@
     <script src="app/components/splash/splash.controller.js"></script>
     <!--SERVICE-->
     <script src="app/shared/shared.service.factory.js"></script>
+     <script type="text/javascript" src="app/shared/shared.toast.factory.js"></script>
      <script src="app/components/dashboard/dashboard.service.js"></script>
+
+     <script type="text/javascript">
+         
+         document.addEventListener("online", onOnline, false);
+                  document.addEventListener("offline", onOffline, false);
+                  function onOnline() {
+                      navigator.onLine=true;
+                }
+                function onOffline() {
+                   navigator.onLine=false;
+                }
+
+     </script>
     
-</body >
+</body>
     
 </html>
 
@@ -46,4 +63,12 @@
 
 <!-- Web Service URL 
 http://content.guardianapis.com/search?api-key=1fe52415-6e22-4d4d-8c83-2d1a129d3660&show-fields=thumbnail
+-->
+<!--
+Infinite loading of Pages in Guardian API 
+for this we will write as 
+
+
+http://content.guardianapis.com/search?api-key=1fe52415-6e22-4d4d-8c83-2d1a129d3660&page=100
+
 -->

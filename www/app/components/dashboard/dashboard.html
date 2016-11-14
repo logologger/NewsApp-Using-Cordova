@@ -33,10 +33,11 @@
 
 
 
-
-
-
-<div flex-xs flex-gt-xs="50" layout="column">
+<div class="bg-loader">
+<md-progress-circular ng-show="DC.loading" class="md-warn md-hue-3 loader" md-diameter="100">
+</md-progress-circular>
+</div>
+<div flex-xs flex-gt-xs="50" layout="column" infinite-scroll="DC.loadMore()" infinite-scroll-distance="3">
       <md-card ng-repeat="data in DC.newsData">
         <md-card-header>
           
